@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {margin: 1.5rem; border: 0.1rem solid #d40d59;}
+        div {margin: 1rem;}
+        input {width: 50%;}
+        label {display: inline-block; width: 100%;}
+        
+        div > .result {
+            border: 0.05rem solid #2c5528;
+            margin-left: 0;
+            width: 50%;
+        }
+        
+        .btn > span {
+            border: 0.4rem ridge #db8839;
+            margin-left: 0;
+            display: inline-block;
+            background-color: rgb(226, 226, 226);
+            cursor: pointer;
+            margin-bottom: 0.1rem;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" id="input">        
+        <section id="stat">
+            <div>
+                <label for="lv">角色等級</label>
+                <input type="number" class="stat" id="lv" name="lv">
+            </div>
+            <div>
+                <label for="str">str</label>
+                <input type="number" class="stat" id="str" name="str">
+            </div>
+            <div>
+                <label for="dex">dex</label>
+                <input type="number" class="stat" id="dex" name="dex">
+            </div>
+            <div>
+                <label for="int">int</label>
+                <input type="number" class="stat" id="int" name="int">
+            </div>
+            <div>
+                <label for="agi">agi</label>
+                <input type="number" class="stat" id="agi" name="agi">
+            </div>
+            <div>
+                <label for="vit">vit</label>
+                <input type="number" class="stat" id="vit" name="vit">
+            </div>
+            <div>
+                <label for="crt">crt</label>
+                <input type="number" class="stat" id="crt" name="crt">
+            </div>
+            <div>
+                <label for="men">men</label>
+                <input type="number" class="stat" id="men" name="men">
+            </div>
+        </section>
+        
+        <section id="monster">
+            <div>
+                <label for="lvM">怪物等級</label>
+                <input type="number" class="monster" id="lvM" name="lvM">
+            </div>
+            <div>
+                <label for="defM">怪物物防</label>
+                <input type="number" class="monster" id="defM" name="defM">
+            </div>
+            <div>
+                <label for="mdefM">怪物魔防</label>
+                <input type="number" class="monster" id="mdefM" name="mdefM">
+            </div>
+            <div>
+                <label for="phyResistM">怪物物抗(%)</label>
+                <input type="number" class="monster" id="phyResistM" name="phyResistM">
+            </div>
+            <div>
+                <label for="magResistM">怪物魔抗(%)</label>
+                <input type="number" class="monster" id="magResistM" name="magResistM">
+            </div>
+            <div>
+                <label for="fleeM">怪物迴避</label>
+                <input type="number" class="monster" id="fleeM" name="fleeM">
+            </div>
+        </section>
+        
+        <section id="skill">
+            <div>
+                <label for="skillType">技能類型</label>
+                <select class="skill" id="skillType" name="skillType">
+                    <option value="">選擇技能類型</option>
+                    <option value="nor">普攻</option>
+                    <option value="phy">物理攻擊</option>
+                    <option value="mag">魔法攻擊</option>
+                </select>
+            </div>
+            <div>
+                <label for="skillNearFar">遠近</label>
+                <select class="skill" id="skillNearFar" name="skillNearFar">
+                    <option value="">選擇遠近</option>
+                    <option value="noNearFar">不吃遠近</option>
+                    <option value="near">近</option>
+                    <option value="far">遠</option>
+                </select>
+            </div>
+            <div>
+                <label for="skillPtg">技能倍率(%)(自己計算能力影響)</label>
+                <input type="number" class="skill" id="skillPtg" name="skillPtg">
+            </div>
+            <div>
+                <label for="skillConst">技能常數(自己計算能力影響)</label>
+                <input type="number" class="skill" id="skillConst" name="skillConst">
+            </div>
+            <div>
+                <label for="skillTime">招式所需時間</label>
+                <input type="number" class="skill" id="skillTime" name="skillTime">
+            </div>
+            <div>
+                <label for="skill1">要領等級</label>
+                <input type="number" class="skill" id="skill1" name="skill1">
+            </div>
+            <div>
+                <label for="skill2">提升攻擊力等級</label>
+                <input type="number" class="skill" id="skill2" name="skill2">
+            </div>
+            <div>
+                <label for="skill3">提升爆擊率等級</label>
+                <input type="number" class="skill" id="skill3" name="skill3">
+            </div>
+            <div>
+                <label for="skill4">威嚇之力等級</label>
+                <input type="number" class="skill" id="skill4" name="skill4">
+            </div>
+            <div>
+                <label for="skill5">雙手合持等級</label>
+                <input type="number" class="skill" id="skill5" name="skill5">
+            </div>
+        </section>
+        
+        <section id="equip">
+            <div>
+                <label for="equipSelect">武器選擇</label>
+                <select class="equip" id="equipSelect" name="equipSelect">
+                    <option value="">選擇武器</option>
+                    <option value="bareHand">空手</option>
+                    <option value="ohs">單手劍</option>
+                    <option value="ths">大劍</option>
+                    <option value="ds">雙劍</option>
+                    <option value="bow">弓</option>
+                    <option value="bg">弩</option>
+                    <option value="stf">杖</option>
+                    <option value="md">魔導</option>
+                    <option value="kk">拳</option>
+                    <option value="hb">槍</option>
+                    <option value="ktn">拔刀</option>
+                </select>
+            </div>
+            <div>
+                <label for="weaponRefine">武器精煉值(0~15)</label>
+                <input type="text" class="equip" id="weaponRefine" name="weaponRefine">
+            </div>
+            <div>
+                <label for="weaponAtk">武器基攻</label>
+                <input type="text" class="equip" id="weaponAtk" name="weaponAtk">
+            </div>
+            <div>
+                <label for="weaponStab">武器基穩定(%)(+等效副手穩)</label>
+                <input type="text" class="equip" id="weaponStab" name="weaponStab">
+            </div>
+            <div>
+                <label for="weapon2Stab">雙劍副手基穩定(%)</label>
+                <input type="text" class="equip" id="weapon2Stab" name="weapon2Stab">
+            </div>
+            <div>
+                <label for="">
+                    輸入格式注意:<br>
+                    <hr> 
+                    str: s<br>
+                    dex: d<br>
+                    int: i<br>
+                    agi: a<br>
+                    vit: v<br>
+                    武a: wpa<br>
+                    atk: atk<br>
+                    matk: matk<br>
+                    爆擊: c<br>
+                    爆擊傷害: cd<br>
+                    攻速: aspd<br>
+                    唱速: cspd<br>
+                    對屬: elem<br>
+                    近威: near<br>
+                    遠威: far<br>
+                    拔刀攻擊: ktn<br>
+                    穩定: stab<br>
+                    物貫: phyp<br>
+                    魔貫: magp<br>
+                    命中: hit<br>
+                    迴避: flee<br>
+                    仇恨: aggro<br>
+                    hp: hp<br>
+                    mp: mp<br>
+                    <hr>
+                    這邊是裝備素質部分，之間用/隔開，有%加%，屬性換成對屬25%，尾巴打$則紀錄(只能一次)
+                </label>
+            </div>
+            <div>
+                <label for="weapon">武器素質</label>
+                <input type="text" class="equip" id="weapon" name="weapon">
+            </div>
+            <div>
+                <label for="armor">衣服素質</label>
+                <input type="text" class="equip" id="armor" name="armor">
+            </div>
+            <div>
+                <label for="addi">追加素質</label>
+                <input type="text" class="equip" id="addi" name="addi">
+            </div>
+            <div>
+                <label for="ring">戒指素質</label>
+                <input type="text" class="equip" id="ring" name="ring">
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <label for="result">測試用</label>
+                <div class="result" id="result" name="result">test</div>
+            </div>
+            <div>
+                <label for="damage">傷害期望值</label>
+                <div class="result" id="damage" name="damage">tmp</div>
+            </div>
+            <div>
+                <label for="dps">dps</label>
+                <div class="result" id="dps" name="dps">tmp</div>
+            </div>
+            <div>
+                <label for="atk">面板atk</label>
+                <div class="result" id="atk" name="atk">tmp</div>
+            </div>
+            <div>
+                <label for="matk">面板matk</label>
+                <div class="result" id="matk" name="matk">tmp</div>
+            </div>
+            <div>
+                <label for="cResult">爆擊</label>
+                <div class="result" id="cResult" name="cResult">tmp</div>
+            </div>
+            <div>
+                <label for="stabResult">穩定</label>
+                <div class="result" id="stabResult" name="stabResult">tmp</div>
+            </div>
+            <div>
+                <label for="aspdResult">aspd</label>
+                <div class="result" id="aspdResult" name="aspdResult">tmp</div>
+            </div>
+            <div>
+                <label for="cspdResult">cspd</label>
+                <div class="result" id="cspdResult" name="cspdResult">tmp</div>
+            </div>
+            <div>
+                <label for="aggroResult">仇恨</label>
+                <div class="result" id="aggroResult" name="aggroResult">tmp</div>
+            </div>
+            <div>
+                <label for="hitResult">hit</label>
+                <div class="result" id="hitResult" name="hitResult">tmp</div>
+            </div>
+            <div>
+                <label for="fleeResult">flee</label>
+                <div class="result" id="fleeResult" name="fleeResult">tmp</div>
+            </div>
+            <div class="btn">
+                <span id="run">開始計算</span>
+                <span id="restart">重新整理(紅字要改，綠字吃到)</span>
+            </div>
+        </section>
+        <section id="debug">
+            <div id="dg">
+                debug區...
+            </div>
+        </section>
+    </form>
+    <script src="./damageTMP.js"></script>
+</body>
+</html>
