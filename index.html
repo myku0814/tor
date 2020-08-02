@@ -37,7 +37,7 @@
             display: inline-block;
             background-color: rgba(219, 157, 157, 0.534);
             cursor: pointer;
-            margin-bottom: 0.1rem;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -66,15 +66,15 @@
             </div>
             <div>
                 <label for="vit">vit</label>
-                <input type="number" class="stat" id="vit" name="vit">
+                <input type="number" class="stat" id="vit" name="vit" disabled>
             </div>
             <div>
                 <label for="crt">crt</label>
-                <input type="number" class="stat" id="crt" name="crt">
+                <input type="number" class="stat" id="crt" name="crt" disabled>
             </div>
             <div>
                 <label for="men">men</label>
-                <input type="number" class="stat" id="men" name="men">
+                <input type="number" class="stat" id="men" name="men" disabled>
             </div>
         </section>
         
@@ -101,7 +101,7 @@
             </div>
             <div>
                 <label for="fleeM">怪物迴避</label>
-                <input type="number" class="monster" id="fleeM" name="fleeM">
+                <input type="number" class="monster" id="fleeM" name="fleeM" disabled>
             </div>
         </section>
         
@@ -125,16 +125,16 @@
                 </select>
             </div>
             <div>
-                <label for="skillPtg">技能倍率(%)(自己計算能力影響)</label>
+                <label for="skillPtg">技能倍率(%)<br>(自己計算能力影響)</label>
                 <input type="number" class="skill" id="skillPtg" name="skillPtg">
             </div>
             <div>
-                <label for="skillConst">技能常數(自己計算能力影響)</label>
+                <label for="skillConst">技能常數<br>(自己計算能力影響)</label>
                 <input type="number" class="skill" id="skillConst" name="skillConst">
             </div>
             <div>
                 <label for="skillTime">招式所需時間</label>
-                <input type="number" class="skill" id="skillTime" name="skillTime">
+                <input type="number" class="skill" id="skillTime" name="skillTime" disabled>
             </div>
             <div>
                 <label for="skill1">要領等級</label>
@@ -185,7 +185,7 @@
                 <input type="text" class="equip" id="weaponAtk" name="weaponAtk">
             </div>
             <div>
-                <label for="weaponStab">武器基穩定(%)(+等效副手穩)</label>
+                <label for="weaponStab">武器基穩定(%)<br>(+等效副手穩)</label>
                 <input type="text" class="equip" id="weaponStab" name="weaponStab">
             </div>
             <div>
@@ -221,7 +221,7 @@
                     hp: hp<br>
                     mp: mp<br>
                     <hr>
-                    這邊是裝備素質部分，之間用/隔開，有%加%，屬性換成對屬25%，尾巴打$則紀錄(只能一次)
+                    這邊是裝備素質部分<br>之間用/隔開，有%加%<br>屬性換成對屬25%<br>尾巴打$則紀錄(只能一次)<br>ex:<br>s7%/s10/s3%/$
                 </label>
             </div>
             <div>
